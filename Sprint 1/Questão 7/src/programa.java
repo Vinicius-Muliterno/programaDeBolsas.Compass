@@ -1,6 +1,3 @@
-import java.util.Scanner;
-import java.util.Random;
-
 /*7 – Escreva um programa Java que tem como objetivo ser um quis de perguntas e respostas.
 	Na tela, você perguntará ao usuário e ele responderá. Se o usuário acertar ou errar, você
 	precisa informar se ele acertou ou errou e passar para próxima pergunta (enquanto houver
@@ -12,6 +9,10 @@ import java.util.Random;
 	Acertos: 6
 	Erros: 4
  */
+
+import java.util.Scanner;
+import java.util.Random;
+
 public class programa {
 
 	public static void main(String[] args) {
