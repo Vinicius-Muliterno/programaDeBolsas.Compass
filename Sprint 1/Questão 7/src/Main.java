@@ -11,52 +11,50 @@
  */
 
 import java.util.Scanner;
+import java.util.Arrays;
 import java.util.Random;
 
-public class programa {
+public class Main {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		Random gerador = new Random();
-
-		
+		Random rdm = new Random();
 		
 		int contadorAcertos = 0;
 		int contadorErros = 0;
-		int gerado = 10;
-		int [] numero = new int[10];
-		int [] numeroCorreto = new int [10];
-		int [] numeroErrado = new int [10];
+		int gerado = 5;
+		int [] numero = new int[5];
+		int [] corretos = new int [5];
+		int [] errados = new int [5];
 		
 		System.out.println("***************************************************************");
 		System.out.println("Quiz acerte o numero!");
-		
-		
-		System.out.println("Deseja participar: S/N.");
-		char value = input.next().charAt(0);
-				
+		System.out.println("Digite um numero de 0 a 5");
+		System.out.println("Deseja participar do nosso quiz: S/N.");
+		char value = input.nextLine().charAt(0);
+		value =Character.toUpperCase(value);
+						
 		if((value == 's') || (value == 'S')) {
 			
-			do {
+			
+			do {	
+				
 				System.out.println("Qual o seu nome: ");
 				String nome = input.nextLine();
 				
-				
-				for (int i = 1; i <= numero.length; i++) {
+				for (int i = 0; i < numero.length; i++) {
 					System.out.println("Digite um numero:");
 					numero[i] = input.nextInt();
-					if ((gerador.nextInt(gerado)) == numero[i]) {
+					
+					if ((rdm.nextInt(gerado)) == numero[i]) {
 						System.out.println("Você acertou.\n");
 						contadorAcertos++;
-						numeroCorreto[i] = numero[i];
-					
+						corretos[i] = numero[i];	
 					}
 					else {
 						System.out.println("você arrou.");
-						System.out.println("numero era : " + gerador.nextInt(gerado) + "\n");
 						contadorErros++;
-						numeroErrado[i] = numero[i];
-						
+						errados[i] = numero[i];						
 					}
 					
 				}
@@ -66,21 +64,17 @@ public class programa {
 				System.out.println("Usuario: " + nome);
 				System.out.println("Acertos: " + contadorAcertos);
 				System.out.println("Erros: "   + contadorErros );
-				System.out.println("Numeros que você acertou os números: " + numeroCorreto.length );
-				System.out.println("Numeros que você errou os números: "   +  numeroErrado.length );
+				System.out.println("Numeros que você acertou: " + (Arrays.toString(corretos)) );
+				System.out.println("Numeros que você errou : "   +  (Arrays.toString(errados)) );
 				System.out.println("\n***********************************************************\n");
 				
+	
 				System.out.println("Deseja participar novamente: S/N.");
 				value = input.next().charAt(0);
-				
-				
-				
-				
 				
 					
 			}while((value == 's') || (value == 'S'));
 			
-			System.out.println("Obrigado por participar!");
 		}
 			
 		
@@ -88,7 +82,14 @@ public class programa {
 			System.out.println("Obrigado por participar!");
 		}
 		input.close();
-		
+		System.out.println("Obrigado por participar!");
 	}
 
 }
+
+
+
+
+
+
+

@@ -25,11 +25,14 @@
 	
 	
  */
-
+import java.util.Scanner;
 
 public class Salario {
 
 	public static void main(String[] args) {
+		//Scanner input = new Scanner(System.in);
+		
+		
 		
 		
 		
