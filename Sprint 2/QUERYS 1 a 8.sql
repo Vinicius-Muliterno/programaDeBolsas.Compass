@@ -1,6 +1,6 @@
-/* CREATE DATABASE LOJA;
--- Questão 1
-CREATE TABLE testeProdutos (
+CREATE DATABASE LOJA;
+/* -- Questão 1
+CREATE TABLE Produtos (
 	Id_Produto INT PRIMARY KEY NOT NULL
 	, Nome VARCHAR (50) NOT NULL
     , Preco double NOT NULL
@@ -31,7 +31,7 @@ CREATE TABLE Notas_fiscais (
     , CONSTRAINT fk_ProdutoNota FOREIGN KEY (Id_Notas_Fiscais) REFERENCES Produtos (Id_Produto))
 
 -- Questão 5
-SELECT NUMERO FROM NOTAFISCAL WHERE ID_PRODUTO=455644;
+SELECT NUMERO FROM Notas_fiscais WHERE ID_PRODUTO=455644;
 
 -- Questão 6
 ALTER TABLE notas_fiscais
